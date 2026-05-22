@@ -39,7 +39,7 @@
   header {
     background: #060f1e;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
     display: flex;
     align-items: flex-end;
@@ -50,8 +50,12 @@
 
   .wave-bg {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 180px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 220px;
+    height: clamp(180px, 14vw, 260px);
+    display: block;
     opacity: 0.2;
   }
 
