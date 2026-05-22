@@ -40,10 +40,12 @@
     background: #060f1e;
     position: relative;
     overflow: hidden;
-    min-height: 320px;
     width: 100%;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    padding-top: 1.5rem;
+    min-height: 320px;
   }
 
   .wave-bg {
@@ -68,7 +70,7 @@
   .header-content {
     position: relative;
     z-index: 2;
-    padding: 3.5rem 3rem 3rem;
+    padding: clamp(2rem, 4vw, 3.5rem) clamp(1.2rem, 5vw, 3rem) 3rem;
     width: 100%;
     max-width: 860px;
     margin: 0 auto;
@@ -109,11 +111,15 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
   }
 
   nav a {
     font-size: 0.75rem;
     font-weight: 500;
+    min-width: 110px;
+    text-align: center;
+    padding: 0.45rem 1rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     text-decoration: none;
@@ -128,6 +134,27 @@
     background: var(--seafoam);
     border-color: var(--seafoam);
     color: var(--deep);
+  }
+
+  @media (max-width: 640px) {
+    header {
+      align-items: flex-start;
+      padding-top: 1rem;
+      min-height: auto;
+    }
+
+    .header-content {
+      padding: 2rem 1rem 2.2rem;
+    }
+
+    nav {
+      justify-content: center;
+    }
+
+    nav a {
+      flex: 1 1 140px;
+      min-width: 120px;
+    }
   }
 
   .stripe {
@@ -370,19 +397,20 @@
       <div class="card">
         <div class="card-icon">⚔️</div>
         <h3>Clash Royale Game</h3>
-        <p>An interactive game, roll for chances of getting different troops from clash Royale! Play as your chosen troop and interact with the game. <a href="https://github.com/Nolanoreo/Winter-Project-group-A-" target="_blank">View repository →</a></p>
+        <p>An interactive game, roll for chances of getting different troops from clash Royale! Play as your chosen troop and interact with the game.</p>
+        <a href="https://github.com/Nolanoreo/Winter-Project-group-A-" target="_blank">View repository →</a>
       </div>
-    </div>
-    <div class="card">
+      <div class="card">
         <div class="card-icon">🏢</div>
         <h3>CEA Aquarium presentation</h3>
-        <p>A presentation for an Aquarium from floor plans to renderings. <a href="https://docs.google.com/presentation/d/16pmh7C7neg-EeEGH9amWCNvtuafe9AUWEKjvDqYW_QA/edit?slide=id.g4f5b9615d1_0_53#slide=id.g4f5b9615d1_0_53" target="_blank">View repository →</a></p>
+        <p>A presentation for an Aquarium from floor plans to renderings.</p>
+        <a href="https://docs.google.com/presentation/d/16pmh7C7neg-EeEGH9amWCNvtuafe9AUWEKjvDqYW_QA/edit?slide=id.g4f5b9615d1_0_53#slide=id.g4f5b9615d1_0_53" target="_blank">View repository →</a>
       </div>
-    </div>
-    <div class="card">
+      <div class="card">
         <div class="card-icon">🏗️</div>
         <h3>CEA Home Presentation</h3>
-        <p>A presentation about an ADA accessable home. Multiple renderings, floor plans, and building plans. <a href="https://docs.google.com/presentation/d/1_x3_NgGhgVTToBNBlZIHaIf05Sa8nVC6L6lyMZhIn2M/edit?slide=id.g3a726b2a92a_0_144#slide=id.g3a726b2a92a_0_144" target="_blank">View repository →</a></p>
+        <p>A presentation about an ADA accessable home. Multiple renderings, floor plans, and building plans.</p>
+        <a href="https://docs.google.com/presentation/d/1_x3_NgGhgVTToBNBlZIHaIf05Sa8nVC6L6lyMZhIn2M/edit?slide=id.g3a726b2a92a_0_144#slide=id.g3a726b2a92a_0_144" target="_blank">View repository →</a>
       </div>
     </div>
   </section>
